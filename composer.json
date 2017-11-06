@@ -1,0 +1,33 @@
+{
+    "name": "wcomps/tailwind",
+    "description": "Laravel package to use Tailwind components in laravel",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*"
+    },
+    "authors": [
+        {
+            "name": "Aitor Riba",
+            "email": "contact@aitorriba.com"
+        },
+        {
+            "name": "Erik Campobadal",
+            "email": "soc@erik.cat"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Wcomps\\Tailwind\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wcomps\\Tailwind\\TailwindServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
