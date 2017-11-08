@@ -15,19 +15,21 @@
     @isset($items)
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="menu-items">
         <div class="text-sm lg:flex-grow">
-            @foreach ($items as $name => $link)
-                <a href="{{ $link }}" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lightest hover:text-white mr-4 no-underline {{ config('tailwind.navbar.items-classes') }}">
-                    {{ $name }}
-                </a>
-            @endforeach
-        </div>
-        @foreach ($rightItems as $name => $link)
-        <div class="ml-1">
-            <a href="{{ $link }}" class="inline-block text-sm leading-none text-white border-white hover:border-transparent hover:bg-white mt-4 lg:mt-0 no-underline {{ config('tailwind.navbar.right-items-classes') }}">
+        @foreach ($items as $name => $link)
+            <a href="{{ $link }}" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lightest hover:text-white mr-4 no-underline {{ config('tailwind.navbar.items-classes') }}">
                 {{ $name }}
             </a>
+        @endforeach
         </div>
-    @endforeach
+        @isset($rightItems)
+        @foreach ($rightItems as $name => $link)
+            <div class="ml-1">
+                <a href="{{ $link }}" class="inline-block text-sm leading-none text-white border-white hover:border-transparent hover:bg-white mt-4 lg:mt-0 no-underline {{ config('tailwind.navbar.right-items-classes') }}">
+                    {{ $name }}
+                </a>
+            </div>
+        @endforeach
+        @endisset
     </div>
     @endisset
 </nav>
