@@ -1,4 +1,5 @@
 <nav class="flex items-center justify-between flex-wrap p-6 {{ config('tailwind.navbar.nav-classes') }}">
+    <a href="{{ isset($homeLink) ? $homeLink : '#' }}" class="no-underline">
     <div class="flex items-center flex-no-shrink mr-6">
         @isset($image)
             <img src="{{ $image }}" class="h-8 w-8 mr-2">
@@ -7,6 +8,8 @@
             <span class="text-xl tracking-tight {{ config('tailwind.navbar.title-classes') }}">{{ $title }}</span>
         @endisset
     </div>
+    </a>
+
     <div class="block lg:hidden">
         <button id="menu-button" class="flex items-center px-3 py-2 {{ config('tailwind.navbar.menu-button-classes') }}">
             <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
