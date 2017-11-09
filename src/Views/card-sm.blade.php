@@ -1,4 +1,4 @@
-<div class="xl:w-1/3 md:w-1/2 sm:w-full mt-4 px-4">
+<div class="xl:w-1/3 md:w-1/2 w-full mt-4 px-4">
     <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden xl:mt-6">
         <div class="sm:flex sm:items-center px-6 py-4">
             @isset($image)
