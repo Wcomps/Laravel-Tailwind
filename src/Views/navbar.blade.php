@@ -4,7 +4,7 @@
             <img src="{{ $image }}" class="h-8 w-8 mr-2">
         @endisset
         @isset($title)
-            <span class="font-semibold text-xl tracking-tight {{ config('tailwind.navbar.title-classes') }}">{{ $title }}</span>
+            <span class="text-xl tracking-tight {{ config('tailwind.navbar.title-classes') }}">{{ $title }}</span>
         @endisset
     </div>
     <div class="block lg:hidden">
