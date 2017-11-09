@@ -2,7 +2,7 @@
     <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden xl:mt-6">
         <div class="sm:flex sm:items-center px-6 py-4">
             @isset($image)
-                <img class="block h-16 sm:h-24 rounded-full mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="{{ $image }}" alt="">
+                <img class="block h-16 sm:h-24 mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0 {{ config('tailwind.card-sm.img-classes') }}" src="{{ $image }}" alt="">
             @endisset
             <div class="text-center sm:text-left sm:flex-grow">
                 <div class="mb-4">
@@ -16,7 +16,7 @@
                 @isset($buttons)
                     <div>
                     @foreach ($buttons as $title => $link)
-                        <a class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white no-underline" href="{{ $link }}">{{ $title }}</a>
+                        <a class="text-xs font-semibold rounded-full px-4 py-1 leading-normal {{ config('tailwind.card-sm.buttons-classes') }}" href="{{ $link }}">{{ $title }}</a>
                     @endforeach
                     </div>
                 @endisset
